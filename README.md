@@ -457,10 +457,23 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
     npm start
     ```
     
-    If you encounter the following problem
-    <p align="center">
-     <img src="https://user-images.githubusercontent.com/8854447/72450922-25a77480-3789-11ea-9ce3-2319e7e11008.gif">
-    </p>   
+    If you encounter the following problem after execute this command `npm start`
+    ```bash
+    > ./node_modules/nodemon/bin/nodemon.js src/app.js
+    
+    '.' is not recognized as an internal or external command,
+    operable program or batch file.
+    npm ERR! code ELIFECYCLE
+    npm ERR! errno 1
+    npm ERR! server@1.0.0 start: `./node_modules/nodemon/bin/nodemon.js src/app.js`
+    npm ERR! Exit status 1
+    npm ERR!
+    npm ERR! Failed at the server@1.0.0 start script.
+    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+    
+    npm ERR! A complete log of this run can be found in:
+    npm ERR!     C:\Users\User\AppData\Roaming\npm-cache\_logs\2020-03-24T08_02_42_377Z-debug.log
+    ```
     
     that because of you're trying this sample blockchain app on Windows environment. To solve this problem, you only need to edit package.json file to
 
