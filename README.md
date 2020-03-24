@@ -1,6 +1,3 @@
-[日本語はこちら - Japanese version](./README-ja.md)
-
-
 [![Build Status](https://travis-ci.org/IBM/fabcar-blockchain-sample.svg?branch=master)](https://travis-ci.org/IBM/fabcar-blockchain-sample)
 
 
@@ -458,6 +455,21 @@ We will build a network as provided by the IBM Blockchain Platform [documentatio
 
     ```bash
     npm start
+    ```
+    
+    If you encounter the following problem
+    <p align="center">
+     <img src="https://user-images.githubusercontent.com/8854447/72450922-25a77480-3789-11ea-9ce3-2319e7e11008.gif">
+    </p>   
+    
+    that because of you're trying this sample blockchain app on Windows environment. To solve this problem, you only need to edit package.json file to
+
+    ```bash
+    "scripts": {
+      "start": "nodemon src/app.js --exec \"npm run lint && node\"",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "lint": "eslint **/*.js"
+    },
     ```
 
 
